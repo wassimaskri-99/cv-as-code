@@ -1,0 +1,117 @@
+lang: fr
+name: Wassim ASKRI
+title: Ingénieur QA Automation | Playwright | Tests API | Facturation télécom
+photo: photo.jpg
+
+contact:
+  email: wassim.askri@outlook.fr
+  location: Ariana, Tunis, Tunisia
+  linkedin: wassim-askri
+  github: wassimaskri-99
+
+labels:
+  experience: EXPÉRIENCES PROFESSIONNELLES
+  profile: PROFIL
+  skills: COMPÉTENCES TECHNIQUES
+  education: FORMATION
+  certifications: CERTIFICATION
+  languages: LANGUES
+  strengths: POINTS FORTS
+  present: Présent
+  obtainedIn: Obtenue en
+  downloadPdf: Télécharger le PDF
+  otherLanguage: English
+
+experience:
+  - id: club-employes
+    title: QA Automation Engineer
+    company: Club Employés – Application Gifteo
+    start: 2026-04
+    end: present
+    location: Tunis, Tunisie
+    bullets:
+      - "Conception et maintenance de tests automatisés avec **Playwright/TypeScript** pour les parcours web, Android et e-commerce: authentification, panier, checkout, paiements et commandes."
+      - Structuration de l'automatisation avec **Page Object Model**, fixtures réutilisables et données de test maintenables.
+      - Validation des flux **Keycloak**, Google et Microsoft SSO, des APIs, du cycle de paiement et de la cohérence backend via SQL.
+      - Intégration des tests de régression dans **GitLab CI** pour accélérer la validation des releases et clarifier les quality gates.
+    tags: [Playwright, TypeScript, Tests API, SQL, Android, Keycloak, E-commerce, GitLab CI]
+
+  - id: tsi
+    title: QA Automation Engineer
+    company: "TSI Tunisia – Client: Newrest France"
+    start: 2024-07
+    end: 2025-05
+    location: Tunis, Tunisie
+    bullets:
+      - Automatisation de scénarios de validation ERP avec **C#/.NET** et **xUnit**, intégrés dans les pipelines **Azure DevOps CI/CD**.
+      - Création de contrôles de régression réutilisables pour les workflows ERP critiques, les règles métier et la validation des releases.
+      - Validation des APIs REST, de la synchronisation SQL et de la cohérence des données entre les couches applicatives en environnement Agile/Scrum.
+      - Contribution à l'analyse des anomalies, au reporting de tests et à la préparation des validations de release.
+    tags: [C#, .NET, xUnit, SQL, ERP Testing, Azure DevOps, CI/CD]
+
+  - id: billcom
+    title: Functional QA Engineer – Facturation télécom & tests API
+    company: "Billcom Consulting – Client: Orange Tunisia"
+    start: 2022-11
+    end: 2024-06
+    location: Sousse, Tunisie
+    bullets:
+      - Tests des **utilitaires de facturation KSL** pour Orange Tunisie, incluant la synchronisation avec **BGH** et le calcul des frais de consommation utilisateur.
+      - "Validation des **APIs Java** utilisées dans le calcul de facturation: requêtes/réponses, cas d'erreur, règles métier et cohérence SQL."
+      - "Exécution des tests de migration vers **EB23**: mapping des données, non-régression et rapprochement pré/post-migration."
+      - Préparation des cas de test fonctionnels, suivi des anomalies dans **Jira** et support à l'analyse root-cause avec SQL, Linux et Bash.
+    tags: [Tests fonctionnels, Facturation, KSL, BGH, APIs Java, EB23, SQL, Jira]
+
+profile:
+  - Ingénieur QA Automation avec **3+ ans** d'expérience en tests fonctionnels, tests API, validation backend et automatisation.
+  - Solide expérience en **facturation télécom**, workflows ERP, automatisation Playwright, validation SQL et régression CI/CD.
+  - Capable de transformer les règles métier en cas de test clairs, contrôles automatisés fiables et rapports d'anomalies exploitables.
+
+skills:
+  - id: automation
+    name: Automatisation
+    items: [Playwright, Cypress, Selenium, xUnit, Page Object Model, Fixtures]
+  - id: testing
+    name: Testing
+    items: [Fonctionnel, Régression, Smoke, Intégration, E2E, UAT, Migration, Mobile, Web]
+  - id: api-database
+    name: API & Base de données
+    items:
+      [Postman, Swagger, REST API, APIs Java, SQL, Validation backend, Intégrité des données]
+  - id: languages-tools
+    name: Langages & Outils
+    items: [TypeScript, JavaScript, C#, .NET, Python, Bash, Linux, Git, Jira, Allure]
+  - id: devops
+    name: DevOps
+    items: [Azure DevOps, GitLab CI, Jenkins, CI/CD, Docker]
+
+education:
+  - id: espita
+    degree: Diplôme National d'Ingénieur en Génie Logiciel
+    school: ESPITA Sousse – Équivalence reconnue par le Ministère de l'Enseignement Supérieur
+    start: '2022'
+    end: '2025'
+  - id: iset
+    degree: Licence en Développement des Systèmes d'Information
+    school: ISET Jendouba
+    start: '2019'
+    end: '2022'
+
+certifications:
+  - id: istqb
+    name: ISTQB CTFL v4.0
+    year: 2026
+
+languages:
+  - name: Arabe
+    level: Langue maternelle
+  - name: Français
+    level: Professionnel
+  - name: Anglais
+    level: Intermédiaire
+
+strengths:
+  - Validation facturation télécom et frais de consommation
+  - Tests API, SQL et cohérence backend
+  - Automatisation Playwright et régression CI
+  - Reporting clair des anomalies et analyse métier
