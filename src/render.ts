@@ -1,10 +1,7 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import { escapeHtml as esc, formatPeriod, inline, plain } from './format';
-import { pdfFileName, templatesDir } from './paths';
+import { fillLayout } from './layout';
+import { pdfFileName } from './paths';
 import type { Cv, Job } from './schema';
-
-const layout = readFileSync(resolve(templatesDir, 'layout.html'), 'utf8');
 
 const tags = (items: string[]) =>
   `<ul class="tags">${items.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>`;
@@ -101,7 +98,8 @@ export function renderCv(cv: Cv): string {
   const otherLang = cv.lang === 'fr' ? 'en' : 'fr';
   const content = `<nav class="toolbar" aria-label="${esc(cv.labels.otherLanguage)} / PDF">
       <a data-testid="language-switch" href="../${otherLang}/" hreflang="${otherLang}" lang="${otherLang}">${esc(cv.labels.otherLanguage)}</a>
-      <a data-testid="download-pdf" href="${pdfFileName(cv.lang)}" download>${esc(cv.labels.downloadPdf)}</a>
+      <a data-testid="download-pdf-design" href="${pdfFileName(cv.lang, 'design')}" download>${esc(cv.labels.downloadDesign)}</a>
+      <a class="primary" data-testid="download-pdf" href="${pdfFileName(cv.lang, 'ats')}" download>${esc(cv.labels.downloadAts)}</a>
     </nav>
     <main class="cv">
       ${renderHeader(cv)}
@@ -113,12 +111,13 @@ export function renderCv(cv: Cv): string {
       </div>
     </main>`;
 
-  const values: Record<string, string> = {
+  return fillLayout({
     lang: cv.lang,
     otherLang,
+    alternateUrl: `../${otherLang}/`,
+    stylesheet: '../assets/cv.css',
     pageTitle: esc(`${cv.name} – CV`),
     description: esc(plain(cv.title)),
     content,
-  };
-  return layout.replace(/\{\{(\w+)\}\}/g, (match, key: string) => values[key] ?? match);
+  });
 }

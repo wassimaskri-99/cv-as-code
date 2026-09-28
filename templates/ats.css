@@ -1,0 +1,122 @@
+/* ATS version: one column, plain document order, text only.
+   Layout inspired by Jake's Resume / RenderCV "classic". */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: url('fonts/lato-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  src: url('fonts/lato-700.woff2') format('woff2');
+}
+
+@page {
+  size: A4;
+  margin: 10mm 13mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111827;
+  font:
+    9.3pt/1.28 'Lato',
+    Arial,
+    sans-serif;
+  /* Keeps "fi", "ff" as separate letters in the PDF text layer. */
+  font-variant-ligatures: none;
+  /* Keeps "fi", "ff" as separate letters in the PDF text layer. */
+}
+
+.ats {
+  max-width: 184mm;
+  margin: 0 auto;
+}
+
+@media screen {
+  .ats {
+    padding: 24px 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 20pt;
+  line-height: 1.1;
+}
+
+.title {
+  margin-top: 2px;
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.contact {
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+
+section {
+  margin-top: 9px;
+}
+
+h2 {
+  margin-bottom: 4px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #111827;
+  font-size: 10.5pt;
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-size: 9.8pt;
+}
+
+section > p + p {
+  margin-top: 1px;
+}
+
+.entry + .entry {
+  margin-top: 6px;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 12px;
+}
+
+.entry-sub {
+  font-style: italic;
+}
+
+ul {
+  margin-top: 2px;
+  padding-left: 14px;
+}
+
+.stack {
+  margin-top: 2px;
+}

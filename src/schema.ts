@@ -36,7 +36,9 @@ export const cvSchema = z.strictObject({
     strengths: text,
     present: text,
     obtainedIn: text,
-    downloadPdf: text,
+    downloadAts: text,
+    downloadDesign: text,
+    techStack: text,
     otherLanguage: text,
   }),
   experience: z

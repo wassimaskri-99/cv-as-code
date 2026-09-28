@@ -14,10 +14,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "test": "playwright test --project=data --project=dist --project=e2e --project=a11y --project=responsive --project=pdf",
+    "test": "playwright test --project=data --project=dist --project=e2e --project=a11y --project=responsive --project=pdf --project=ats",
     "test:data": "playwright test --project=data",
     "test:e2e": "playwright test --project=e2e --project=a11y --project=responsive --project=dist",
-    "test:pdf": "playwright test --project=pdf",
+    "test:pdf": "playwright test --project=pdf --project=ats",
     "test:visual": "sh scripts/visual.sh",
     "test:visual:update": "sh scripts/visual.sh --update-snapshots",
     "report": "playwright show-report"

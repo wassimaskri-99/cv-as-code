@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { loadCv } from './load';
 import { distDir, htmlPath, templatesDir } from './paths';
 import { renderCv } from './render';
+import { renderAtsCv } from './render-ats';
 import { languages } from './schema';
 
 const require = createRequire(import.meta.url);
@@ -12,7 +13,9 @@ const fontsDir = resolve(dirname(require.resolve('@fontsource/lato/package.json'
 rmSync(distDir, { recursive: true, force: true });
 mkdirSync(resolve(distDir, 'assets', 'fonts'), { recursive: true });
 
-copyFileSync(resolve(templatesDir, 'cv.css'), resolve(distDir, 'assets', 'cv.css'));
+for (const file of ['cv.css', 'ats.css']) {
+  copyFileSync(resolve(templatesDir, file), resolve(distDir, 'assets', file));
+}
 copyFileSync(resolve(templatesDir, 'assets', 'photo.jpg'), resolve(distDir, 'assets', 'photo.jpg'));
 for (const weight of ['400', '700']) {
   copyFileSync(
@@ -21,11 +24,16 @@ for (const weight of ['400', '700']) {
   );
 }
 
-for (const lang of languages) {
-  const file = htmlPath(lang);
+function write(file: string, html: string) {
   mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, renderCv(loadCv(lang)));
+  writeFileSync(file, html);
   console.log(`built ${file}`);
+}
+
+for (const lang of languages) {
+  const cv = loadCv(lang);
+  write(htmlPath(lang, 'design'), renderCv(cv));
+  write(htmlPath(lang, 'ats'), renderAtsCv(cv));
 }
 
 // The site root sends visitors to the French CV, with links to both.

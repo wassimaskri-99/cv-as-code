@@ -19,7 +19,9 @@ labels:
   strengths: POINTS FORTS
   present: Présent
   obtainedIn: Obtenue en
-  downloadPdf: Télécharger le PDF
+  downloadAts: Télécharger le CV (PDF)
+  downloadDesign: Version graphique (PDF)
+  techStack: Environnement technique
   otherLanguage: English
 
 experience:

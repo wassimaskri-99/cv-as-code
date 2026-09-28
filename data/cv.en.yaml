@@ -19,7 +19,9 @@ labels:
   strengths: KEY STRENGTHS
   present: Present
   obtainedIn: Obtained in
-  downloadPdf: Download PDF
+  downloadAts: Download CV (PDF)
+  downloadDesign: Designed version (PDF)
+  techStack: Tech stack
   otherLanguage: Français
 
 experience:

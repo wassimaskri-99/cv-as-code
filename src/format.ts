@@ -28,6 +28,13 @@ function formatMonth(value: string, lang: Lang): string {
   return `${name.charAt(0).toUpperCase()}${name.slice(1)} ${String(year)}`;
 }
 
+/** "04/2026 – Présent", "2019 – 2022". The numeric form parsers read most reliably. */
+export function formatPeriodNumeric(start: string, end: string, present: string): string {
+  const format = (value: string) =>
+    value.length === 4 ? value : `${value.slice(5)}/${value.slice(0, 4)}`;
+  return `${format(start)} – ${end === 'present' ? present : format(end)}`;
+}
+
 /** "Avril 2026 – Présent", "2019 – 2022". */
 export function formatPeriod(start: string, end: string, lang: Lang, present: string): string {
   const format = (value: string) => (value.length === 4 ? value : formatMonth(value, lang));
