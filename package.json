@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "test": "playwright test",
+    "test": "playwright test --project=data --project=dist --project=e2e --project=a11y --project=responsive --project=pdf",
     "test:data": "playwright test --project=data",
     "test:e2e": "playwright test --project=e2e --project=a11y --project=responsive --project=dist",
     "test:pdf": "playwright test --project=pdf",

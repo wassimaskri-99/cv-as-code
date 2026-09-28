@@ -62,7 +62,7 @@ npx playwright install chromium
 npm run build          # dist/fr, dist/en: HTML + PDF
 npm run serve          # http://localhost:4173
 
-npm test               # all tests except visual ones need a build first
+npm test               # every test except visual (needs a build first)
 npm run test:data      # schema + content, no browser
 npm run test:e2e       # e2e + a11y + responsive + build output
 npm run test:pdf
