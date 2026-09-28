@@ -54,14 +54,16 @@ for (const lang of languages) {
     }
   });
 
-  test(`the PDF download link serves a PDF (${lang})`, async ({ page, request }) => {
+  test(`both PDF download buttons serve a PDF (${lang})`, async ({ page, request }) => {
     const cvPage = new CvPage(page);
     await cvPage.goto(lang);
-    const href = await cvPage.downloadPdf.getAttribute('href');
 
-    const response = await request.get(new URL(href ?? '', page.url()).href);
+    for (const link of [cvPage.downloadPdf, cvPage.downloadDesignPdf]) {
+      const href = await link.getAttribute('href');
+      const response = await request.get(new URL(href ?? '', page.url()).href);
 
-    expect(response.status()).toBe(200);
-    expect(response.headers()['content-type']).toBe('application/pdf');
+      expect(response.status(), href ?? '').toBe(200);
+      expect(response.headers()['content-type']).toBe('application/pdf');
+    }
   });
 }

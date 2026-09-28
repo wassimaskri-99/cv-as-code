@@ -1,4 +1,5 @@
 import type { Locator, Page } from '@playwright/test';
+import type { Variant } from '../../src/paths';
 import type { Lang } from '../../src/schema';
 
 export const sectionKeys = [
@@ -18,6 +19,7 @@ export class CvPage {
   readonly title: Locator;
   readonly languageSwitch: Locator;
   readonly downloadPdf: Locator;
+  readonly downloadDesignPdf: Locator;
   readonly email: Locator;
   readonly linkedin: Locator;
   readonly github: Locator;
@@ -27,13 +29,15 @@ export class CvPage {
     this.title = page.getByTestId('title');
     this.languageSwitch = page.getByTestId('language-switch');
     this.downloadPdf = page.getByTestId('download-pdf');
+    this.downloadDesignPdf = page.getByTestId('download-pdf-design');
     this.email = page.getByTestId('contact-email');
     this.linkedin = page.getByTestId('contact-linkedin');
     this.github = page.getByTestId('contact-github');
   }
 
-  async goto(lang: Lang) {
-    await this.page.goto(`/${lang}/`);
+  /** The designed page by default; `ats` opens the one-column version the ATS PDF is made from. */
+  async goto(lang: Lang, variant: Variant = 'design') {
+    await this.page.goto(variant === 'ats' ? `/${lang}/ats/` : `/${lang}/`);
     await this.page.evaluate(() => document.fonts.ready);
   }
 

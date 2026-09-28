@@ -27,6 +27,7 @@ export default defineConfig({
     { name: 'data', testDir: './tests/data' },
     { name: 'dist', testDir: './tests/dist' },
     { name: 'pdf', testDir: './tests/pdf', use: { ...devices['Desktop Chrome'] } },
+    { name: 'ats', testDir: './tests/ats' },
     { name: 'e2e', testDir: './tests/e2e', use: { ...devices['Desktop Chrome'] } },
     { name: 'a11y', testDir: './tests/a11y', use: { ...devices['Desktop Chrome'] } },
     {
