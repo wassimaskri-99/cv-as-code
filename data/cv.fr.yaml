@@ -30,7 +30,7 @@ experience:
     end: present
     location: Tunis, Tunisie
     bullets:
-      - "Conception et maintenance de tests automatisés avec **Playwright/TypeScript** pour les parcours web, Android et e-commerce: authentification, panier, checkout, paiements et commandes."
+      - 'Conception et maintenance de tests automatisés avec **Playwright/TypeScript** pour les parcours web, Android et e-commerce: authentification, panier, checkout, paiements et commandes.'
       - Structuration de l'automatisation avec **Page Object Model**, fixtures réutilisables et données de test maintenables.
       - Validation des flux **Keycloak**, Google et Microsoft SSO, des APIs, du cycle de paiement et de la cohérence backend via SQL.
       - Intégration des tests de régression dans **GitLab CI** pour accélérer la validation des releases et clarifier les quality gates.
@@ -38,7 +38,7 @@ experience:
 
   - id: tsi
     title: QA Automation Engineer
-    company: "TSI Tunisia – Client: Newrest France"
+    company: 'TSI Tunisia – Client: Newrest France'
     start: 2024-07
     end: 2025-05
     location: Tunis, Tunisie
@@ -51,14 +51,14 @@ experience:
 
   - id: billcom
     title: Functional QA Engineer – Facturation télécom & tests API
-    company: "Billcom Consulting – Client: Orange Tunisia"
+    company: 'Billcom Consulting – Client: Orange Tunisia'
     start: 2022-11
     end: 2024-06
     location: Sousse, Tunisie
     bullets:
       - Tests des **utilitaires de facturation KSL** pour Orange Tunisie, incluant la synchronisation avec **BGH** et le calcul des frais de consommation utilisateur.
       - "Validation des **APIs Java** utilisées dans le calcul de facturation: requêtes/réponses, cas d'erreur, règles métier et cohérence SQL."
-      - "Exécution des tests de migration vers **EB23**: mapping des données, non-régression et rapprochement pré/post-migration."
+      - 'Exécution des tests de migration vers **EB23**: mapping des données, non-régression et rapprochement pré/post-migration.'
       - Préparation des cas de test fonctionnels, suivi des anomalies dans **Jira** et support à l'analyse root-cause avec SQL, Linux et Bash.
     tags: [Tests fonctionnels, Facturation, KSL, BGH, APIs Java, EB23, SQL, Jira]
 
@@ -76,8 +76,7 @@ skills:
     items: [Fonctionnel, Régression, Smoke, Intégration, E2E, UAT, Migration, Mobile, Web]
   - id: api-database
     name: API & Base de données
-    items:
-      [Postman, Swagger, REST API, APIs Java, SQL, Validation backend, Intégrité des données]
+    items: [Postman, Swagger, REST API, APIs Java, SQL, Validation backend, Intégrité des données]
   - id: languages-tools
     name: Langages & Outils
     items: [TypeScript, JavaScript, C#, .NET, Python, Bash, Linux, Git, Jira, Allure]

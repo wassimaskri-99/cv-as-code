@@ -30,7 +30,7 @@ experience:
     end: present
     location: Tunis, Tunisia
     bullets:
-      - "Design and maintain automated tests with **Playwright/TypeScript** for web, Android and e-commerce flows: authentication, cart, checkout, payments and order lifecycle."
+      - 'Design and maintain automated tests with **Playwright/TypeScript** for web, Android and e-commerce flows: authentication, cart, checkout, payments and order lifecycle.'
       - Structure automation with **Page Object Model**, reusable fixtures and maintainable test data to keep regression suites clear, stable and scalable.
       - Validate **Keycloak**, Google and Microsoft SSO flows, API behavior, payment workflow and backend consistency through SQL checks.
       - Integrate regression tests into **GitLab CI**, supporting release validation, faster feedback and clearer quality gates.
@@ -38,7 +38,7 @@ experience:
 
   - id: tsi
     title: QA Automation Engineer
-    company: "TSI Tunisia – Client: Newrest France"
+    company: 'TSI Tunisia – Client: Newrest France'
     start: 2024-07
     end: 2025-05
     location: Tunis, Tunisia
@@ -51,13 +51,13 @@ experience:
 
   - id: billcom
     title: Functional QA Engineer – Telecom Billing & API Testing
-    company: "Billcom Consulting – Client: Orange Tunisia"
+    company: 'Billcom Consulting – Client: Orange Tunisia'
     start: 2022-11
     end: 2024-06
     location: Sousse, Tunisia
     bullets:
       - Tested **KSL billing utilities** for Orange Tunisia, including synchronization with **BGH** and user consumption fee calculation workflows.
-      - "Validated **Java APIs** used in billing calculation: request/response behavior, error cases, business rules and SQL data consistency."
+      - 'Validated **Java APIs** used in billing calculation: request/response behavior, error cases, business rules and SQL data consistency.'
       - Executed migration testing toward **EB23**, including data mapping, non-regression checks and pre/post-migration reconciliation.
       - Prepared functional test cases, tracked defects in **Jira** and supported root-cause analysis using SQL, Linux and Bash.
     tags: [Functional Testing, Billing, KSL, BGH, Java API, EB23, SQL, Jira]

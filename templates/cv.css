@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/lato-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/lato-700.woff2') format('woff2');
+}
+
+/* Colors from the original AltaCV template. */
+:root {
+  --accent: #0e5d78;
+  --accent-soft: #e7f0f3;
+  --emphasis: #1f2933;
+  --body: #334155;
+  --muted: #475569;
+  --rule: #cbd5e1;
+  --page: #f1f5f9;
+  --paper: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--body);
+  font:
+    15px/1.45 'Lato',
+    system-ui,
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+strong {
+  color: var(--emphasis);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 16px 0;
+}
+
+.toolbar a {
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.toolbar a[download] {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.cv {
+  max-width: 1000px;
+  margin: 16px auto 32px;
+  padding: 32px;
+  background: var(--paper);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 12%);
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.photo {
+  flex: none;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  color: var(--emphasis);
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.title {
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 64fr 36fr;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.section + .section {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  color: var(--emphasis);
+  font-size: 1rem;
+}
+
+.entry + .entry {
+  margin-top: 14px;
+}
+
+.entry-org {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.bullets {
+  margin-top: 6px;
+  padding-left: 18px;
+}
+
+.bullets li + li {
+  margin-top: 3px;
+}
+
+.section > p + p {
+  margin-top: 6px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 1px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.skill-group + .skill-group {
+  margin-top: 8px;
+}
+
+.skill-group h3 {
+  font-size: 0.9rem;
+}
+
+.skill-group .tags {
+  margin-top: 4px;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 14px;
+  }
+  .cv {
+    margin: 12px 0 0;
+    padding: 20px 16px;
+    border-radius: 0;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* The PDF: one A4 page, same layout, denser type. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: var(--paper);
+    font-size: 8.4pt;
+    line-height: 1.32;
+  }
+  .toolbar {
+    display: none;
+  }
+  .cv {
+    max-width: none;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 7mm 8mm;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .header {
+    gap: 14px;
+    padding-bottom: 8px;
+  }
+  .photo {
+    width: 24mm;
+    height: 24mm;
+  }
+  h1 {
+    font-size: 20pt;
+  }
+  .title {
+    font-size: 10pt;
+  }
+  .contact {
+    margin-top: 5px;
+    font-size: 8pt;
+  }
+  .columns {
+    gap: 6mm;
+    margin-top: 8px;
+  }
+  .section + .section {
+    margin-top: 9px;
+  }
+  h2 {
+    margin-bottom: 5px;
+    font-size: 9.5pt;
+  }
+  h3 {
+    font-size: 9pt;
+  }
+  .entry + .entry {
+    margin-top: 8px;
+  }
+  .entry-meta {
+    font-size: 7.8pt;
+  }
+  .bullets {
+    margin-top: 3px;
+    padding-left: 12px;
+  }
+  .bullets li + li {
+    margin-top: 1px;
+  }
+  .tags {
+    gap: 3px;
+    margin-top: 4px;
+  }
+  .tags li {
+    padding: 0 5px;
+    font-size: 7.2pt;
+  }
+  .skill-group + .skill-group {
+    margin-top: 5px;
+  }
+  .skill-group h3 {
+    font-size: 8.4pt;
+  }
+}

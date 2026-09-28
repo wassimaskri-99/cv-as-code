@@ -3,7 +3,8 @@ import { resolve } from 'node:path';
 import { parse } from 'yaml';
 import { cvSchema, type Cv, type Lang } from './schema';
 
-export const dataPath = (lang: Lang) => resolve(import.meta.dirname, '..', 'data', `cv.${lang}.yaml`);
+export const dataPath = (lang: Lang) =>
+  resolve(import.meta.dirname, '..', 'data', `cv.${lang}.yaml`);
 
 export function readRawCv(lang: Lang): unknown {
   return parse(readFileSync(dataPath(lang), 'utf8'));
